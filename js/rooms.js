@@ -29,7 +29,7 @@ const app = new Vue({
       if(firQues === '로딩중') {
         if(secQues === '윈도우xp') {
           if(trdQues === '글로벌') {
-            window.location.herf = './ending.html'
+            window.location.href = './ending.html'
           }
         }
       } else{
