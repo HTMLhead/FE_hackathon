@@ -50,6 +50,9 @@ var app = new Vue({
         onComplete: () => {vm.doneLoading()},
       });
     },
+    skipIntro() {
+      window.location.href = "/door.html";
+    },
     doneLoading() {
       this.isLoaded = true;
     }
