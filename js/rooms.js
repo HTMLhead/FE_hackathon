@@ -29,6 +29,7 @@ const app = new Vue({
       if(firQues === '로딩중') {
         if(secQues === '윈도우xp') {
           if(trdQues === '글로벌') {
+            alert('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
             window.location.href = './ending.html'
           }
         }
