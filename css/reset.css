@@ -1,6 +1,6 @@
 @font-face {
   font-family:'DungGeunMo';
-  src: url('../fonts/DungGeunMo.eot'), url('../fonts/DungGeunMo.woff');
+  src: url('../fonts/DungGeunMo.eot'), url('../fonts/DungGeunMo.woff'), url('../fonts/DungGeunMo.woff2');
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -25,9 +25,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-  font-family:'DungGeunMo';
 	font: inherit;
 	vertical-align: baseline;
+  font-family: 'DungGeunMo';
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
