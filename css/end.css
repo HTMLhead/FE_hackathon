@@ -1,8 +1,17 @@
 @import url("./reset.css");
 @import url("./common.css");
-
-.container div {
+.container p {
   color: #fff;
   font-size: 50px;
   margin-bottom: 30px;
+}
+
+.ending-credit {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.first {
+  margin-top: 100px;
 }
