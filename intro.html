@@ -9,16 +9,17 @@
 </head>
 <body>
   <div class="container">
-    <div id="typed-strings">
-      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-      <p>It <em>types</em> out sentences.</p>
+    <div class="chat">
+      <div class="chat-text element">
+      </div>
+      <!-- <span id="typed"></span> -->
     </div>
-    <span id="typed"></span>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script type="text/javascript">
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings'
+    var typed = new Typed('.element', {
+      strings: ["First ^1000 sentence.", "Second sentence."],
+      typeSpeed: 30
     });
   </script>
 </body>

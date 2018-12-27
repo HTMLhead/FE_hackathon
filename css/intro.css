@@ -8,5 +8,24 @@ body {
   margin: auto;
   width: 1200px;
   height: 100vh;
-  background: yellow;
+  background: #333;
+  position: relative;
+}
+
+.chat {
+  position: fixed;
+  bottom: 4%;
+  left: 4%;
+  right: 4%;
+  padding: 20px;
+  height: 20vh;
+  background: #000;
+  opacity: 0.8;
+  border-radius: 15px;
+  border: 2px solid rgba(256, 256, 256, 0.7);
+}
+
+.chat-text {
+  display: inline !important;
+  color: white;
 }
