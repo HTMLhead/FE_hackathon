@@ -26,7 +26,7 @@ const app = new Vue({
       if (this.hasKey) {
         this.activeChat("삑. 문이 열렸다.");
         setTimeout(() => {
-          window.location.href = "/front.html";
+          window.location.href = "./front.html";
         }, 3000)
       } else {
         this.activeChat("경비를 해제해야할 것 같다.");
