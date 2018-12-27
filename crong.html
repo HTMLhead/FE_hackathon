@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="app">
     <div class='mini-map'>
       <div class='crong inner' onclick="window.location.href='./crong.html';">
         <span class='inner-text'>마스터<br>책상</span>
@@ -25,17 +25,19 @@
 
     <div class="main">
       <img src="./photo/crong.jpeg" class="main-image">
-      <div class='desk info'></div>
-      <div class='bag info'></div>
-      <div class='cabinet info'></div>
-      <div class='under info'></div>
+      <div @click="activeChat('\'최저임금\'에 대한 책을 읽고 계시는군.')" class='desk info'></div>
+      <div @click="activeChat('가방 안에는 아무것도 없다.')" class='bag info'></div>
+      <div @click="activeChat('1. 세상에서 가장 지루한 중학교는?<br>2. 창문을 깼는데 피가 안 나오면?<br>3. 반성문을 영어로 하면?')" class='cabinet info'></div>
+      <div @click="activeChat('...윽. 저건 만지고 싶지 않다.')" class='under info'></div>
     </div>
-    <div class="chat">
-      <div class="chat-text element">
+    <div class="chat" v-show="showChat">
+      <div class="chat-text">
       </div>
-      <!-- <span id="typed"></span> -->
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="./js/rooms.js" type="module"></script>
 </body>
 
 </html>

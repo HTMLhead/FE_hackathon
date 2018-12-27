@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="app">
     <div class='mini-map'>
       <div class='crong inner' onclick="window.location.href='./crong.html';">
         <span class='inner-text'>마스터<br>책상</span>
@@ -25,16 +25,18 @@
 
     <div class="main">
       <img src="./photo/room.jpeg" class="main-image">
-      <div class='screen info'></div>
-      <div class='projector info'></div>
-      <div class='remote info'></div>
+      <div @click="activeChat('프로젝터가 \'로딩중\'이다.')" class='screen info'></div>
+      <div @click="activeChat('전원 버튼에 손이 닿지 않는다.')" class='projector info'></div>
+      <div @click="activeChat('프로젝터를 켜볼까?')" class='remote info'></div>
     </div>
-    <div class="chat">
-      <div class="chat-text element">
+    <div class="chat" v-show="showChat">
+      <div class="chat-text">
       </div>
-      <!-- <span id="typed"></span> -->
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="./js/rooms.js" type="module"></script>
 </body>
 
 </html>
