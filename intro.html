@@ -9,7 +9,6 @@
 </head>
 <body>
   <div class="container" id="app" @click="addIndex">
-    <div class="skip-button" @click="skipIntro">Skip</div>
     <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
       <div class="main">
         <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image">
@@ -21,6 +20,7 @@
       </div>
     </div>
   </div>
+  <!-- <div class="skip-button" @click.stop="skipIntro()">Skip</div> -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="./js/main.js"></script>

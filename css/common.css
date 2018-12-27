@@ -35,26 +35,6 @@
   text-align: center;
 }
 
-.chat {
-  position: fixed;
-  bottom: 4%;
-  left: 4%;
-  right: 4%;
-  padding: 20px 30px;
-  height: 20vh;
-  text-align: left;
-  background: #000;
-  opacity: 0.8;
-  border-radius: 15px;
-  border: 2px solid rgba(256, 256, 256, 0.7);
-}
-
-.chat-text {
-  color: white;
-  font-size: 20px;
-  line-height: 2;
-}
-
 .mini-map {
 	top:12px;
 	left:12px;
@@ -84,4 +64,24 @@
 
 .inner-text{
 	line-height: 28px;
+}
+
+.chat {
+  position: fixed;
+  bottom: 4%;
+  left: 4%;
+  right: 4%;
+  padding: 20px 30px;
+  height: 20vh;
+  text-align: left;
+  background: #000;
+  opacity: 0.8;
+  border-radius: 15px;
+  border: 2px solid rgba(256, 256, 256, 0.7);
+}
+
+.chat-text {
+  color: white;
+  font-size: 20px;
+  line-height: 2;
 }
