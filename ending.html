@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Intro</title>
+  <title>ending</title>
   <link rel="stylesheet" href="./css/ending.css">
 </head>
 
 <body>
   <div class="container" id="app" @click="addIndex">
-    <div class="ending" v-if="index === activeIndex">
+    <div class="ending" v-for="(story, index) in stories" v-if="index === activeIndex">
       <div class="main">
         <div class="main-icon"></div>
       </div>
