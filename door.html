@@ -10,20 +10,22 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="app">
     <div class="main">
       <img src="./photo/intro7.jpeg" class="main-image">
-      <div class='door info'></div>
-      <div class='signBoard info'></div>
-      <div class='security info'></div>
-      <div class='floor info'></div>
+      <div @click="activeChat('문이 잠겨있다.')" class='door info'></div>
+      <div @click="getKey" class='signBoard info'></div>
+      <div @click="openDoor" class='security info'></div>
+      <div @click="activeChat('슬랙에 들어가서 열어라고 치면 될 것 같지만 경비가 울릴 것 같다.')" class='floor info'></div>
     </div>
-    <div class="chat">
-      <div class="chat-text element">
+    <div class="chat" v-show="showChat">
+      <div class="chat-text">
       </div>
-      <!-- <span id="typed"></span> -->
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="./js/door.js" type="module"></script>
 </body>
 
 </html>
