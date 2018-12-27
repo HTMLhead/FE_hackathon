@@ -1,0 +1,27 @@
+@import url("./reset.css");
+body {
+  width: 1200px;
+  height: 800px;
+  background: #000;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  background-image: url('../photo/crong.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+.info {
+  position: absolute;
+  width: 2%;
+  height: 30px;
+  background: #fff;
+  border: 1px solid gray;
+}
+
+.desk{
+  top:
+}
