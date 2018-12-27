@@ -27,9 +27,9 @@
       <img src="./photo/crong.jpeg" class="main-image">
       <div @click="activeChat('\'최저임금\'에 대한 책을 읽고 계시는군.')" class='desk info'></div>
       <div @click="activeChat('가방 안에는 아무것도 없다.')" class='bag info'></div>
-      <div @click="activeChat('1. 세상에서 가장 지루한 중학교는?<br>2. 창문을 깼는데 피가 안 나오면?<br>3. 반성문을 영어로 하면?')" class='cabinet info'></div>
+      <div @click="activeChat('1. 세상에서 가장 지루한 중학교는?\<br>2. 창문을 깼는데 피가 안 나오면?\<br>3. 반성문을 영어로 하면?')" class='cabinet info'></div>
       <div @click="activeChat('...윽. 저건 만지고 싶지 않다.')" class='under info'></div>
-      <div @click="prompt('1. 세상에서 가장 지루한 중학교는?')prompt('2. 창문을 깻는데 피가 안 나오면?')prompt('3. 반성문을 영어로 하면?')" class='lock'></div>
+      <div @click="open()" class='lock'></div>
     </div>
     <div class="chat" v-show="showChat">
       <div class="chat-text">
