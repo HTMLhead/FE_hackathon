@@ -1,24 +1,5 @@
 @import url("./reset.css");
-
-.main {
-  position: relative;
-  display: inline-block;
-  max-height: 100vh;
-}
-
-.main-image {
-  display: block;
-  max-height: 100vh;
-}
-.main-icon {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  background: yellow;
-  width: 10px;
-  height: 10px;
-}
-
+@import url("./common.css");
 
 .chat {
   position: fixed;
