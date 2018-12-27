@@ -64,6 +64,7 @@
     border:1px solid #fff;
     background:#000085;
     z-index:9;
+    color:#fff
 }
 
 .inner {
@@ -77,7 +78,8 @@
 }
 
 .inner:hover {
-	background:#fff;
+    background:#fff;
+    color:#000;
 }
 
 .inner-text{
