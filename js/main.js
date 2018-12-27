@@ -36,7 +36,7 @@ var app = new Vue({
         this.activeIndex++
         this.activeChat();
       } else if (this.activeIndex === 4) {
-        window.location.href = "/door.html";
+        window.location.href = "./door.html";
       }
     },
     activeChat() {
@@ -51,7 +51,7 @@ var app = new Vue({
       });
     },
     skipIntro() {
-      window.location.href = "/door.html";
+      window.location.href = "./door.html";
     },
     doneLoading() {
       this.isLoaded = true;
