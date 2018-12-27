@@ -1,3 +1,5 @@
+@import url("./reset.css");
+
 body {
   background: #000;
 }
@@ -5,6 +7,6 @@ body {
 .container {
   margin: auto;
   width: 1200px;
-  height: 720px;
+  height: 100vh;
   background: yellow;
 }
