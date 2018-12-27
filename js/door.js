@@ -17,8 +17,10 @@ const app = new Vue({
       });
     },
     getKey() {
-      this.hasKey = true;
       this.activeChat("밤코카드를 획득했다.");
+      setTimeout(() => {
+        this.hasKey = true;
+      }, 1000)
     },
     openDoor() {
       if (this.hasKey) {

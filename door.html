@@ -11,6 +11,7 @@
 
 <body>
   <div class="container" id="app">
+    <div class="card" v-if="hasKey">밤코카드</div>
     <div class="main">
       <img src="./photo/intro7.jpeg" class="main-image">
       <div @click="activeChat('문이 잠겨있다.')" class='door info'></div>
