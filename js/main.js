@@ -20,31 +20,38 @@ var app = new Vue({
       },
       {
         imageUrl: 'intro6',
-        text: ["", "게임설명"],
+        text: ["", "코드스쿼드에 도착했다.", "시험지를 훔치러 들어가볼까?"],
       },
-      {
-        imageUrl: 'intro7',
-        text: ["", "게임설명2"],
-      },
+      // {
+      //   imageUrl: 'intro7',
+      //   text: ["", "게임설명2"],
+      // },
     ],
     activeIndex: 0,
     isLoaded: false,
   },
   methods: {
     addIndex() {
-      if(this.activeIndex < 5) {
+      if(this.isLoaded && this.activeIndex < 4) {
         this.activeIndex++
         this.activeChat();
+      } else if (this.activeIndex === 4) {
+        window.location.href = "/door.html";
       }
     },
     activeChat() {
+      const vm = this;
+      vm.isLoaded = false;
       const typed = new Typed('.chat-text', {
         strings: this.stories[this.activeIndex].text,
         typeSpeed: 40,
         backDelay: 500,
         fadeOut: true,
-        onComplete: (self) => {console.log('self:', self);}
+        onComplete: () => {vm.doneLoading()},
       });
+    },
+    doneLoading() {
+      this.isLoaded = true;
     }
   },
   mounted() {
