@@ -1,0 +1,17 @@
+@import url("./reset.css");
+@import url("./common.css");
+
+.screen {
+    top: 37%;
+    left: 23%;
+}
+
+.projector {
+    top: 25%;
+    left: 48%;
+}
+
+.remote {
+    top: 68%;
+    left: 58%;
+}

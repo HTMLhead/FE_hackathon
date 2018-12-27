@@ -1,0 +1,17 @@
+@import url("./reset.css");
+@import url("./common.css");
+
+.bookshelf {
+    top: 30%;
+    left: 28%;
+}
+
+.blackboard {
+    top: 40%;
+    left: 62%;
+}
+
+.notebook {
+    top: 60%;
+    left: 66%;
+}

@@ -27,12 +27,12 @@
 }
 
 .container {
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    position: relative;
-    text-align: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  position: relative;
+  text-align: center;
 }
 
 .chat {
@@ -53,4 +53,31 @@
   color: white;
   font-size: 20px;
   line-height: 2;
+}
+
+.mini-map {
+	top:12px;
+	left:12px;
+	position:fixed;
+	width: 202px;
+	height: 69px;
+	border:1px solid #fff
+}
+
+.inner {
+	cursor: pointer;
+	width: 55px;
+	height: 55px;
+	border:1px solid #fff;
+	display:inline-block;
+	position: relative;
+	top:6px;
+}
+
+.inner:hover {
+	background:#fff;
+}
+
+.inner-text{
+	line-height: 28px;
 }
