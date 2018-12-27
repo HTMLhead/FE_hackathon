@@ -61,7 +61,9 @@
 	position:fixed;
 	width: 202px;
 	height: 69px;
-	border:1px solid #fff
+    border:1px solid #fff;
+    background:#000085;
+    z-index:9;
 }
 
 .inner {
