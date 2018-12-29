@@ -12,7 +12,7 @@ const app = new Vue({
         typeSpeed: 40,
         backDelay: 500,
         fadeOut: true,
-        onComplete: (self) => {vm.closeChat(self)},
+        onComplete: (self) => { vm.closeChat(self) },
       });
     },
     closeChat(self) {
@@ -26,15 +26,23 @@ const app = new Vue({
       var firQues = prompt('세상에서 가장 지루한 중학교는?')
       var secQues = prompt('창문을 깼는데 피가 안 나오면?')
       var trdQues = prompt('세상에서 가장 가난한 임금은?')
-      if(firQues === '로딩중') {
-        if(secQues === '윈도우xp') {
-          if(trdQues === '최저임금') {
-            alert('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
-            window.location.href = './ending.html'
+      if (firQues === '로딩중') {
+        if (secQues === '윈도우xp') {
+          if (trdQues === '최저임금') {
+            const LockOpen = new Audio('./sound/lockOpen.mp3')
+            lockOpen.play();
+            setTimeout(() => {
+              alert('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
+              window.location.href = './ending.html'  
+            }, 500)
           }
         }
-      } else{
-        alert('열리지않는다.')
+      } else {
+        const Lock = new Audio('./sound/lock.mp3');
+        Lock.play();
+        setTimeout(() => {
+          alert('열리지않는다.');
+        }, 200)
       }
     }
   },

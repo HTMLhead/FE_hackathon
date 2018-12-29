@@ -17,6 +17,8 @@ const app = new Vue({
       });
     },
     getKey() {
+      const ClickSound = new Audio('./sound/clickSound.mp3');
+      ClickSound.play();
       this.activeChat("밤코카드를 획득했다.");
       setTimeout(() => {
         this.hasKey = true;
@@ -24,6 +26,8 @@ const app = new Vue({
     },
     openDoor() {
       if (this.hasKey) {
+        const Beep = new Audio('./sound/beep..wav');
+        Beep.play();
         this.activeChat("삑. 문이 열렸다.");
         setTimeout(() => {
           window.location.href = "./front.html";
