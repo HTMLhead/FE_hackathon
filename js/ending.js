@@ -38,6 +38,10 @@ var app = new Vue({
       } else if (this.activeIndex === 5) {
         window.location.href = "./end.html";
       }
+      if (this.activeIndex === 3) {
+        var Alarm = new Audio('./sound/alarm.mp3')
+        Alarm.play();
+      }
     },
     activeChat() {
       const vm = this;

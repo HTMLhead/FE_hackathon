@@ -30,7 +30,7 @@ const app = new Vue({
         if (secQues === '윈도우xp') {
           if (trdQues === '최저임금') {
             const LockOpen = new Audio('./sound/lockOpen.mp3')
-            lockOpen.play();
+            LockOpen.play();
             setTimeout(() => {
               alert('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
               window.location.href = './ending.html'  
