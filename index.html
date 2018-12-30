@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Intro</title>
-  <link rel="stylesheet" href="./css/intro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
 <body>
-  <audio controls autoplay loop hidden>
-    <source src="./sound/background.mp3" type="audio/ogg">
-  </audio>
-  <div class="container" id="app" @click="addIndex">
-    <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
-      <div class="main">
-        <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image">
-        <div class="main-icon"></div>
-      </div>
-      <div class="chat">
-        <div class="chat-text">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="skip-button" @click.stop="skipIntro()">Skip</div> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script src="./js/main.js"></script>
+<script>
+    function playGame() {
+        window.location.href = './intro.html'
+    }
+    playGame();
+</script>
 </body>
-
 </html>

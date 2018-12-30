@@ -39,7 +39,7 @@ var app = new Vue({
         window.location.href = "./end.html";
       }
       if (this.activeIndex === 3) {
-        var Alarm = new Audio('./sound/alarm.mp3')
+        const Alarm = new Audio('./sound/alarm.mp3')
         Alarm.play();
       }
     },
