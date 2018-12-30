@@ -26,7 +26,7 @@ const app = new Vue({
     },
     openDoor() {
       if (this.hasKey) {
-        const Beep = new Audio('./sound/beep..wav');
+        const Beep = new Audio('./sound/beepOpen.mp3');
         Beep.play();
         this.activeChat("삑. 문이 열렸다.");
         setTimeout(() => {
