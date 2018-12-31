@@ -29,7 +29,6 @@ const app = new Vue({
   methods: {
     addIndex() {
       if (this.isLoaded && this.activeIndex < 4) {
-        console.log(this.isLoaded + '//' + this.activeIndex);
         this.activeIndex++;
         this.activeChat();
       } else if (this.isLoaded && this.activeIndex === 4) {
