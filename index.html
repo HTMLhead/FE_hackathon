@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-<script>
-    function playGame() {
-        window.location.href = './intro.html'
-    }
-    playGame();
-</script>
+	<div class='container'>
+		<header>
+			<div class='game-title'>게임제목</div>
+		</header>
+
+		<div class='wholeBody'>
+			<div class='game-start btn' onclick="window.location.href='./intro.html';">
+				<div class='btn-sentence'>
+					게임시작
+				</div>
+			</div>
+			<div class='game-rule-container btn'>
+				<div class='btn-sentence'>
+					게임방법
+				</div>
+			</div>
+			<div class='game-rule'>
+				<span>딱보면 척 알껄요?엌ㅋㅋㅋㅋㅋㅋㅋ</span>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
