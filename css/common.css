@@ -40,8 +40,8 @@
   top: 12px;
   left: 12px;
   position: fixed;
-  width: 202px;
-  height: 69px;
+  width: 40vh;
+  height: 12vh;
   border: 1px solid #fff;
   background: #000085;
   z-index: 9;
@@ -50,8 +50,8 @@
 
 .inner {
   cursor: pointer;
-  width: 55px;
-  height: 55px;
+  width: 28%;
+  height: 82%;
   border: 1px solid #fff;
   display: inline-block;
   position: relative;
@@ -64,7 +64,8 @@
 }
 
 .inner-text {
-  line-height: 28px;
+  line-height: 5vh;
+  font-size: 3vh;
 }
 
 .chat {
