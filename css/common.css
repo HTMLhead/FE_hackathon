@@ -1,29 +1,29 @@
 .main {
-    position: relative;
-    display: inline-block;
-    max-height: 100vh;
+  position: relative;
+  display: inline-block;
+  max-height: 100vh;
 }
 
 .main-image {
-    display: block;
-    max-height: 100vh;
+  display: block;
+  max-height: 100vh;
 }
 
 .info {
-    cursor: pointer;
-    position: absolute;
-    background: #808080;
-    background-image: url('../photo/icon.png');
-    background-size: 100% 100%;
-    width: 3.5%;
-    height: 2.5%;
-    border: 1px solid #808080;
-    border-radius: 50%;
-    opacity: 0.2;
+  cursor: pointer;
+  position: absolute;
+  background: #808080;
+  background-image: url('../photo/icon.png');
+  background-size: 100% 100%;
+  width: 3.5%;
+  height: 2.5%;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  opacity: 0.2;
 }
 
 .info:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .container {
@@ -36,34 +36,34 @@
 }
 
 .mini-map {
-	top:12px;
-	left:12px;
-	position:fixed;
-	width: 202px;
-	height: 69px;
-    border:1px solid #fff;
-    background:#000085;
-    z-index:9;
-    color:#fff
+  top: 12px;
+  left: 12px;
+  position: fixed;
+  width: 202px;
+  height: 69px;
+  border: 1px solid #fff;
+  background: #000085;
+  z-index: 9;
+  color: #fff
 }
 
 .inner {
-	cursor: pointer;
-	width: 55px;
-	height: 55px;
-	border:1px solid #fff;
-	display:inline-block;
-	position: relative;
-	top:6px;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  top: 6px;
 }
 
 .inner:hover {
-    background:#fff;
-    color:#000;
+  background: #fff;
+  color: #000;
 }
 
-.inner-text{
-	line-height: 28px;
+.inner-text {
+  line-height: 28px;
 }
 
 .chat {

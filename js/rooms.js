@@ -33,7 +33,7 @@ const app = new Vue({
             LockOpen.play();
             setTimeout(() => {
               alert('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
-              window.location.href = './ending.html'  
+              window.location.href = './ending.html'
             }, 500)
           }
         }
@@ -41,7 +41,7 @@ const app = new Vue({
         const Lock = new Audio('./sound/lock.mp3');
         Lock.play();
         setTimeout(() => {
-          alert('열리지않는다.');
+          alert('열리지 않는다.');
         }, 200)
       }
     }
@@ -49,4 +49,3 @@ const app = new Vue({
   mounted() {
   }
 })
-

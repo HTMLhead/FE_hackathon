@@ -1,40 +1,41 @@
 @import url("./reset.css");
 @import url("./common.css");
+
 .desk {
-    top: 33%;
-    left: 34%;
+  top: 33%;
+  left: 34%;
 }
 
 .bag {
-    top: 46%;
-    left: 48%;
+  top: 46%;
+  left: 48%;
 }
 
 .cabinet {
-    top: 57%;
-    left: 93%;
+  top: 57%;
+  left: 93%;
 }
 
 .under {
-    top: 53%;
-    left: 30%;
+  top: 53%;
+  left: 30%;
 }
 
 .lock {
-    cursor: pointer;
-    position: absolute;
-    background: #808080;
-    background-image: url('../photo/lock.png');
-    background-size: 100% 100%;
-    width: 3.5%;
-    height: 2.5%;
-    border: 1px solid #808080;
-    border-radius: 50%;
-    opacity: 0.2;
-    top: 53.4%;
-    left: 93%;
+  cursor: pointer;
+  position: absolute;
+  background: #808080;
+  background-image: url('../photo/lock.png');
+  background-size: 100% 100%;
+  width: 3.5%;
+  height: 2.5%;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  opacity: 0.2;
+  top: 53.4%;
+  left: 93%;
 }
 
 .lock:hover {
-    opacity: 1;
+  opacity: 1;
 }

@@ -1,52 +1,55 @@
 @import url("./reset.css");
 @import url("./common.css");
 
-header{
-    padding:20vh;
-    font-size:14vh;
-    color:#fff;
+header {
+  padding: 20vh;
+  font-size: 14vh;
+  color: #fff;
 }
 
-.btn{
-    width: 14vh;
-    height: 2vh;
-    padding:2vh;
-    border:1px solid #fff;
-    margin:1vh auto;
-    font-size:3vh;
+.btn {
+  width: 14vh;
+  height: 2vh;
+  padding: 2vh;
+  border: 1px solid #fff;
+  margin: 1vh auto;
+  font-size: 3vh;
 }
 
-.wholeBody{
-    padding-top:4vh;
+.wholeBody {
+  padding-top: 4vh;
 }
 
-.game-start{
-    cursor: pointer;
-    color:#fff;
+.game-start {
+  cursor: pointer;
+  color: #fff;
 }
+
 .game-start:hover {
-    color:#000;
-    background-color:#fff;
+  color: #000;
+  background-color: #fff;
 }
 
-.game-rule-container{
-    cursor: pointer;
-    color:#fff;
+.game-rule-container {
+  cursor: pointer;
+  color: #fff;
 }
-.game-rule-container:hover{
-    color:#000;
-    background-color:#fff;
+
+.game-rule-container:hover {
+  color: #000;
+  background-color: #fff;
 }
-.game-rule-container:hover + .game-rule {
-    opacity:1;   
+
+.game-rule-container:hover+.game-rule {
+  opacity: 1;
 }
 
 .game-rule {
-    opacity:0;
-    width:50vh;
-    padding:2vh;
-    border:1px solid #fff;
-    margin:1vh auto;
-    font-size:3vh;
-    color:#fff;
+  opacity: 0;
+  width: 50vh;
+  padding: 2vh;
+  border: 1px solid #fff;
+  margin: 1vh auto;
+  font-size: 3vh;
+  color: #fff;
 }

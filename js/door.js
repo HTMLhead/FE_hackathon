@@ -13,7 +13,7 @@ const app = new Vue({
         typeSpeed: 40,
         backDelay: 500,
         fadeOut: true,
-        onComplete: (self) => {vm.closeChat(self)},
+        onComplete: (self) => { vm.closeChat(self) },
       });
     },
     getKey() {
@@ -33,7 +33,7 @@ const app = new Vue({
           window.location.href = "./front.html";
         }, 3000)
       } else {
-        this.activeChat("경비를 해제해야할 것 같다.");
+        this.activeChat("경비를 해제해야 할 것 같다.");
       }
     },
     closeChat(self) {
