@@ -1,6 +1,18 @@
 @import url("./reset.css");
 @import url("./common.css");
 
+.sound-guide {
+  color: #fff;
+  text-align: right;
+  margin: 3vh 3vw 0 0;
+  font-size: 3vh;
+  opacity: 0.5;
+}
+
+.sound-guide img {
+  width: 2vh;
+}
+
 header {
   padding: 20vh;
   font-size: 14vh;
