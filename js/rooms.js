@@ -43,25 +43,6 @@ const app = new Vue({
         chatText.innerText = "";
       }, 1000);
     },
-    open() {
-      let firQues = prompt("세상에서 가장 지루한 중학교는?");
-      let secQues = prompt("창문을 깼는데 피가 안 나오면?");
-      let trdQues = prompt("세상에서 가장 가난한 임금은?");
-      if (firQues === "로딩중" && secQues === "윈도우xp" && trdQues === "최저임금") {
-        const LockOpen = new Audio("./sound/lockOpen.mp3");
-        LockOpen.play();
-        setTimeout(() => {
-          alert("자물쇠가 열렸다. 안에는 시험지가 놓여있었다.");
-          window.location.href = "./ending.html";
-        }, 500);
-      } else {
-        const Lock = new Audio("./sound/lock.mp3");
-        Lock.play();
-        setTimeout(() => {
-          alert("열리지 않는다.");
-        }, 200);
-      }
-    },
     resetAnswer() {
       this.questions.forEach(item => {
         item.input = "";
@@ -95,5 +76,5 @@ const app = new Vue({
       }
     }
   },
-  mounted() {}
+  mounted() { }
 });
