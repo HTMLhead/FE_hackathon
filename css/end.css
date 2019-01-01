@@ -3,16 +3,23 @@
 
 .container p {
   color: #fff;
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 7vw;
+  margin-bottom: 6vw;
+}
+
+marquee {
+  height: 100%;
 }
 
 .ending-credit {
-  width: 500px;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 }
 
-.first {
-  margin-top: 100px;
+@media screen and (min-width: 800px) {
+  .container p {
+    font-size: 55px;
+    margin-bottom: 45px;
+  }
 }

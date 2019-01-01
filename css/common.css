@@ -33,7 +33,7 @@
   background: #333;
   position: relative;
   text-align: center;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .mini-map {
@@ -73,7 +73,7 @@
   bottom: 4%;
   left: 4%;
   right: 4%;
-  padding: 20px 30px;
+  padding: 3vh 5vw;
   height: 20vh;
   text-align: left;
   background: #000;
@@ -83,7 +83,13 @@
 }
 
 .chat-text {
-  color: white;
-  font-size: 3.5vh;
+  color: #fff;
+  font-size: 2.5vh;
   line-height: 2;
+}
+
+@media screen and (min-width: 800px) {
+  .chat-text {
+    font-size: 22px;
+  }
 }
