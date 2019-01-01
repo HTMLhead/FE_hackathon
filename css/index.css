@@ -1,6 +1,5 @@
 @import url("./reset.css");
 @import url("./common.css");
-
 .sound-guide {
   color: #fff;
   text-align: right;
@@ -14,22 +13,18 @@
 }
 
 header {
-  padding: 20vh;
-  font-size: 14vh;
+  padding: 20vh 0;
+  font-size: 10vw;
   color: #fff;
 }
 
 .btn {
-  width: 15vh;
-  height: 3vh;
-  padding: 2vh;
+  width: 20vh;
+  height: 5vh;
+  padding-top: 2vh;
   border: 1px solid #fff;
   margin: 1vh auto;
-  font-size: 3vh;
-}
-
-.wholeBody {
-  padding-top: 4vh;
+  font-size: 3.5vh;
 }
 
 .game-start {
@@ -59,9 +54,15 @@ header {
 .game-rule {
   opacity: 0;
   width: 50vh;
-  padding: 2vh;
+  padding: 2vh 1vh;
   border: 1px solid #fff;
   margin: 1vh auto;
   font-size: 3vh;
   color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    font-size: 7vw;
+  }
 }
