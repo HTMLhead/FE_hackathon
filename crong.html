@@ -29,10 +29,21 @@
       <div @click="activeChat('가방 안에는 아무것도 없다.')" class='bag info'></div>
       <div @click="activeChat('1. 세상에서 가장 지루한 중학교는?\<br>2. 창문을 깼는데 피가 안 나오면?\<br>3. 세상에서 가장 가난한 임금은?')" class='cabinet info'></div>
       <div @click="activeChat('...윽. 저건 만지고 싶지 않다.')" class='under info'></div>
-      <div @click="open()" class='lock'></div>
+      <div @click="openModal" class='lock'></div>
     </div>
     <div class="chat" v-show="showChat">
       <div class="chat-text">
+      </div>
+    </div>
+    <div class="modal" v-if="showModal" @click="closeModal">
+      <div class="modal-body" @click.stop :class="{'modal-body-wrong': wrongAnswer}">
+        <button class="modal-btn-close" @click="closeModal">x</button>
+        <h1 class="modal-title">서랍이 잠겨있네... 자물쇠를 풀려면 문제를 맞춰야 하는데...</h1>
+        <div class="modal-question" v-for="question in questions">
+          <label class="modal-question-label">{{ question.question }}</label>
+          <input type="text" class="modal-question-input" v-model="question.input">
+        </div>
+        <button class="modal-btn-submit" @click="submitAnswer">열기</button>
       </div>
     </div>
   </div>
