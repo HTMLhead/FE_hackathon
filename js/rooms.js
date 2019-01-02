@@ -63,7 +63,8 @@ const app = new Vue({
         const LockOpen = new Audio("./sound/lockOpen.mp3");
         LockOpen.play();
         setTimeout(() => {
-          window.location.href = "./ending.html";
+          this.closeModal();
+          this.successChat('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
         }, 500);
       } else {
         this.wrongAnswer = true;
@@ -74,7 +75,22 @@ const app = new Vue({
           this.wrongAnswer = false;
         }, 500);
       }
-    }
+    },
+    successChat(text) {
+      const vm = this;
+      vm.showChat = true;
+      const typed = new Typed(".chat-text", {
+        strings: ["", text],
+        typeSpeed: 40,
+        backDelay: 500,
+        fadeOut: true,
+        onComplete: self => {
+          setTimeout(() => {
+            window.location.href = "./ending.html";
+          }, 1000);
+        }
+      });
+    },
   },
   mounted() { }
 });
