@@ -7,6 +7,24 @@
   margin-bottom: 6vw;
 }
 
+.restart-button {
+  color: #fff;
+  float: right;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  opacity: 0.5;
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  opacity: 1;
+}
+
+.restart-button img {
+  width: 2vh;
+}
+
 marquee {
   height: 100%;
 }
