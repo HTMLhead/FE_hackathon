@@ -1,3 +1,4 @@
+let count = 0
 const app = new Vue({
   el: '#app',
   data: {
@@ -34,6 +35,17 @@ const app = new Vue({
         }, 3000)
       } else {
         this.activeChat("경비를 해제해야 할 것 같다.");
+      }
+    },
+    catcha() {
+      count++;
+      if(count !== 2) {
+        this.activeChat("열어. 라고 슬랙에 입력했지만 아무런 반응이 없다.");
+      } else {
+        this.activeChat('열어. 라고 슬랙에 입력하자 사이렌이 울렸다.')
+        setTimeout(() => {
+          window.location.href = "./catcha.html";
+        }, 3000)
       }
     },
     closeChat(self) {
