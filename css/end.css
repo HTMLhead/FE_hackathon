@@ -1,43 +1,55 @@
 @import url("./reset.css");
 @import url("./common.css");
-
 .container p {
-  color: #fff;
-  font-size: 7vw;
-  margin-bottom: 6vw;
+    color: #fff;
+    font-size: 7vw;
+    margin-bottom: 6vw;
 }
 
 .restart-button {
-  color: #fff;
-  float: right;
-  margin-top: 2vh;
-  margin-right: 2vw;
-  opacity: 0.5;
-  font-size: 3vh;
-  cursor: pointer;
+    color: #fff;
+    float: right;
+    margin-top: 2vh;
+    margin-right: 2vw;
+    opacity: 0.5;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.restart-img {
+  animation: rotating 3s linear infinite;
 }
 
 .restart-button:hover {
-  opacity: 1;
+    opacity: 1;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .restart-button img {
-  width: 2vh;
+    width: 2vh;
 }
 
 marquee {
-  height: 100%;
+    height: 100%;
 }
 
 .ending-credit {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media screen and (min-width: 800px) {
-  .container p {
-    font-size: 55px;
-    margin-bottom: 45px;
-  }
+    .container p {
+        font-size: 55px;
+        margin-bottom: 45px;
+    }
 }

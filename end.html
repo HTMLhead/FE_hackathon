@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>시험지를 훔쳤다 - 엔딩 크레딧</title>
+    <link rel="stylesheet" href="./css/end.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>시험지를 훔쳤다 - 엔딩 크레딧</title>
-  <link rel="stylesheet" href="./css/end.css">
-</head>
-
-<body>
-  <audio controls autoplay loop hidden>
-    <source src="./sound/ending.mp3" type="audio/ogg">
-  </audio>
-  <div class="container" id="app">
-    <div class="restart-button" @click="restart">
-      <img src="./photo/restart.svg" alt="restart icon"> 다시 하기
-    </div>
-    <MARQUEE direction="up">
-      <div class="ending-credit">
-        <p>제1회 코드스쿼드</p>
-        <p>프론트엔드 해커톤</p>
-        <p>2018년 12월 27일</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>윤</p>
-        <p>숨</p>
-        <p>헤드</p>
-        <p>새라</p>
-        <p>솔로몬</p>
+  <body>
+    <audio controls autoplay loop hidden>
+      <source src="./sound/ending.mp3" type="audio/ogg" />
+    </audio>
+    <div class="container" id="app">
+      <div class="restart-button" @click="restart">
+        <img class="restart-img" src="./photo/restart.svg" alt="restart icon" />
+        다시 하기
       </div>
-    </MARQUEE>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="./js/end.js"></script>
-</body>
-
+      <MARQUEE direction="up">
+        <div class="ending-credit">
+          <p>제1회 코드스쿼드</p>
+          <p>프론트엔드 해커톤</p>
+          <p>2018년 12월 27일</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>윤</p>
+          <p>숨</p>
+          <p>헤드</p>
+          <p>새라</p>
+          <p>솔로몬</p>
+        </div>
+      </MARQUEE>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/end.js"></script>
+  </body>
 </html>
