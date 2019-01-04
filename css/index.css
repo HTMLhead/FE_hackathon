@@ -47,10 +47,6 @@ header {
   background-color: #fff;
 }
 
-.game-rule-container:hover+.game-rule {
-  opacity: 1;
-}
-
 .game-rule {
   opacity: 0;
   width: 50vh;
@@ -59,6 +55,10 @@ header {
   margin: 1vh auto;
   font-size: 3vh;
   color: #fff;
+}
+
+.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 800px) {
