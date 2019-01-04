@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class='container'>
+  <div class='container' id="app">
     <div class="sound-guide">
       <img src="./photo/musical-note.svg" alt="musical-note-icon"> 스피커를 ON 해보세요
     </div>
@@ -25,16 +25,18 @@
           게임 시작
         </div>
       </div>
-      <div class='game-rule-container btn'>
+      <div class='game-rule-container btn' @click="showGameRule">
         <div class='btn-sentence'>
           게임 방법
         </div>
       </div>
-      <div class='game-rule'>
+      <div v-bind:class="'game-rule' + show">
         <span>딱 보면 척 알 걸요? 엌ㅋㅋㅋㅋㅋ</span>
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./js/common.js"></script>
 </body>
 
 </html>
