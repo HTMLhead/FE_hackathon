@@ -25,7 +25,7 @@
   cursor: pointer;
   position: absolute;
   background: #808080;
-  background-image: url('../photo/lock.png');
+  background-image: url('../photo/icons/lock.png');
   background-size: 100% 100%;
   width: 3.5%;
   height: 2.5%;

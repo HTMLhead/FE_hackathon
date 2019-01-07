@@ -15,11 +15,11 @@ const app = new Vue({
         text: ["", "엘리베이터를 타고 올라간다."],
       },
       {
-        imageUrl: 'intro5',
+        imageUrl: 'intro4',
         text: ["", "4층을 누른다."],
       },
       {
-        imageUrl: 'intro6',
+        imageUrl: 'intro5',
         text: ["", "코드스쿼드에 도착했다.", "시험지를 훔치러 들어가 볼까?"],
       },
     ],
