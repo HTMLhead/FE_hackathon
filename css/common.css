@@ -36,6 +36,22 @@
   overflow-y: hidden;
 }
 
+.scroll-guide {
+  color: #fff;
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+  font-size: 3vh;
+  opacity: 0;
+  z-index: 9;
+}
+
+.scroll-guide img {
+  width: 3vh;
+  float: left;
+  margin-right: 10px;
+}
+
 .mini-map {
   top: 12px;
   left: 12px;
@@ -91,5 +107,11 @@
 @media screen and (min-width: 800px) {
   .chat-text {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scroll-guide {
+    opacity: 0.7;
   }
 }

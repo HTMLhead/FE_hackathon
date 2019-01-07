@@ -11,6 +11,9 @@
 
 <body>
   <div class="container" id="app" @click="addIndex">
+    <div class="scroll-guide">
+      <img src="./photo/bidi-arrow.svg" alt="bidirection arrow icon"> 화면을 좌우로 움직여보세요
+    </div>
     <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
       <div class="main">
         <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image">
