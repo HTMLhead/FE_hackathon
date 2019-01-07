@@ -38,7 +38,7 @@
 
 .scroll-guide {
   color: #fff;
-  position: absolute;
+  position: fixed;
   top: 3vh;
   right: 3vw;
   font-size: 3vh;
