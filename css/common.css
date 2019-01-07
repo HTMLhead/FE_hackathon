@@ -104,6 +104,10 @@
   line-height: 2;
 }
 
+.scroll-guide-show {
+  opacity: 0.7;
+}
+
 @media screen and (min-width: 800px) {
   .chat-text {
     font-size: 22px;

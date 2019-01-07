@@ -51,6 +51,15 @@ const app = new Vue({
     },
     doneLoading() {
       this.isLoaded = true;
+    },
+    showScrollGuide() {
+      const mainImg = document.querySelector('.main img');
+      if (window.innerWidth < mainImg.width) {
+        document.querySelector('.scroll-guide').classList.add('scroll-guide-show');
+      }
+      else {
+        document.querySelector('.scroll-guide').classList.remove('scroll-guide-show');
+      }
     }
   },
   mounted() {
