@@ -1,17 +1,18 @@
-let count = 0
+let count = 0;
 const app = new Vue({
   el: '#app',
   data: {
     showChat: false,
-    hasKey: false,
+    hasKey: false
   },
   methods: {
     activeChat(text) {
       const vm = this;
       vm.showChat = true;
       const typed = new Typed('.chat-text', {
-        strings: ["", text],
+        strings: [text],
         typeSpeed: 40,
+        startDelay: 200,
         backDelay: 500,
         fadeOut: true,
         onComplete: (self) => { vm.closeChat(self) },
@@ -39,7 +40,7 @@ const app = new Vue({
     },
     catcha() {
       count++;
-      if(count !== 2) {
+      if (count !== 2) {
         this.activeChat("열어. 라고 슬랙에 입력했지만 아무런 반응이 없다.");
       } else {
         this.activeChat('열어. 라고 슬랙에 입력하자 사이렌이 울렸다.')
