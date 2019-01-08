@@ -41,7 +41,7 @@ const app = new Vue({
       const typed = new Typed('.chat-text', {
         strings: vm.stories[vm.activeIndex].text,
         typeSpeed: 40,
-        startDelay: 500,
+        startDelay: 200,
         backDelay: 500,
         fadeOut: true,
         onComplete: () => { vm.doneLoading() },
