@@ -78,9 +78,7 @@ header {
     transform:rotate(360deg);
   }
 }
-.container {
-  display:none;
-}
+
 .spinner{
   margin: auto;
   width: 100vw;
@@ -109,8 +107,6 @@ header {
   display:inline-block;
   width:50px;
   height:50px;
-  border:1px solid #fff;
-  border-radius:50%;
   background-image:url('../photo/soom-cutout.png');
   background-size:50px 50px; 
 }
@@ -127,4 +123,8 @@ header {
   color:#fff;
   margin-top:5vh;
   animation:blink 1s steps(2, start) infinite;
+}
+
+.display {
+  display:none;
 }
