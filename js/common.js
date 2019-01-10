@@ -22,4 +22,4 @@ let fontLoadChecker = setInterval(() => {
     spinner.classList.add('display');
     container.classList.remove('display');
   }
-},2000)
+},100)
