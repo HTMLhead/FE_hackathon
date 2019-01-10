@@ -66,3 +66,49 @@ header {
     font-size: 7vw;
   }
 }
+
+@keyframes circling {
+  0%{
+    transform:rotate(0deg);
+  }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+.spinner{
+  text-align:center;
+}
+.spinner-animation{
+  display:inline-block;
+  width:5vh;
+  height:5vw;
+  border:1px solid black;
+  border-radius: 50%;
+}
+.spinner-inner-circle-container{
+  display:inline-block;
+  width:5vh;
+  height:5vw;
+  animation: circling 3s linear infinite;
+}
+.spinner-inner-circle {
+  display:inline-block;
+  width:2vh;
+  height:2vw;
+  border:1px solid black;
+  border-radius:50%;
+  background-color:black;  
+}
+
+@keyframes blink{
+  to{
+    visibility: hidden;
+  }
+}
+.loading-sentence{
+  margin-top:2vh;
+  animation:blink 1s steps(2, start) infinite;
+}
