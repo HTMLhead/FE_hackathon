@@ -125,6 +125,6 @@ header {
 }
 .loading-sentence{
   color:#fff;
-  margin-top:2vh;
+  margin-top:5vh;
   animation:blink 1s steps(2, start) infinite;
 }
