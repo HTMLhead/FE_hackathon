@@ -78,29 +78,44 @@ header {
     transform:rotate(360deg);
   }
 }
+.container {
+  display:none;
+}
 .spinner{
-  text-align:center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  position: relative;
+  text-align: center;
+  overflow-y: hidden;
 }
 .spinner-animation{
   display:inline-block;
-  width:5vh;
-  height:5vw;
-  border:1px solid black;
+  width:13vh;
+  height:13vw;
+  border:3px solid #fff;
   border-radius: 50%;
+  background-color:#333;
+  margin-top:3vh;
 }
 .spinner-inner-circle-container{
   display:inline-block;
-  width:5vh;
-  height:5vw;
-  animation: circling 3s linear infinite;
+  width:13vh;
+  height:13vw;
+  animation: circling 2s linear infinite;
 }
 .spinner-inner-circle {
   display:inline-block;
-  width:2vh;
-  height:2vw;
-  border:1px solid black;
+  width:5vh;
+  height:5vw;
+  border:1px solid #fff;
   border-radius:50%;
-  background-color:black;  
+  background-image:url('../photo/soom-cutout.png');
+  background-size:5vh 5vw; 
+}
+.soom-ment {
+  color:#fff;
 }
 
 @keyframes blink{
@@ -109,6 +124,7 @@ header {
   }
 }
 .loading-sentence{
+  color:#fff;
   margin-top:2vh;
   animation:blink 1s steps(2, start) infinite;
 }

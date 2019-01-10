@@ -1,5 +1,5 @@
 let fontLoadChecker = setInterval(() => {
-  console.log('nope')
+  console.log(document.fonts.status)
   if(document.fonts.status === 'loaded') {
     clearInterval(fontLoadChecker);
     console.log('hihihihi')
