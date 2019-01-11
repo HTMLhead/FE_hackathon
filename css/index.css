@@ -66,3 +66,65 @@ header {
     font-size: 7vw;
   }
 }
+
+@keyframes circling {
+  0%{
+    transform:rotate(0deg);
+  }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.spinner{
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  position: relative;
+  text-align: center;
+  overflow-y: hidden;
+}
+.spinner-animation{
+  display:inline-block;
+  width:150px;
+  height:150px;
+  border:3px solid #fff;
+  border-radius: 50%;
+  background-color:#333;
+  margin-top:30vh;
+}
+.spinner-inner-circle-container{
+  display:inline-block;
+  width:150px;
+  height:150px;
+  animation: circling 2s linear infinite;
+}
+.spinner-inner-circle {
+  display:inline-block;
+  width:50px;
+  height:50px;
+  background-image:url('../photo/soom-cutout.png');
+  background-size:50px 50px; 
+}
+.soom-ment {
+  color:#fff;
+}
+
+@keyframes blink{
+  to{
+    visibility: hidden;
+  }
+}
+.loading-sentence{
+  color:#fff;
+  margin-top:5vh;
+  animation:blink 1s steps(2, start) infinite;
+}
+
+.display {
+  display:none;
+}
