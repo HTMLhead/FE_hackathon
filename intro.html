@@ -16,7 +16,7 @@
     </div>
     <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
       <div class="main">
-        <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image" @load="showScrollGuide">
+        <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image" @load="loadFunc">
         <div class="main-icon"></div>
       </div>
       <div class="chat">

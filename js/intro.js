@@ -30,7 +30,6 @@ const app = new Vue({
     addIndex() {
       if (this.isLoaded && this.activeIndex < 4) {
         this.activeIndex++;
-        this.activeChat();
       } else if (this.isLoaded && this.activeIndex === 4) {
         window.location.href = "./door.html";
       }
@@ -63,6 +62,10 @@ const app = new Vue({
       else {
         scrollGuideEl.classList.remove('scroll-guide-show');
       }
+    },
+    loadFunc() {
+      this.activeChat();
+      this.showScrollGuide();
     }
   },
   mounted() {
