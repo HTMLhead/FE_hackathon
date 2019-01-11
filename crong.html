@@ -32,8 +32,7 @@
       <div @click="openModal" class='lock'></div>
     </div>
     <div class="chat" v-show="showChat">
-      <div class="chat-text">
-      </div>
+      <span class="chat-text"></span>
     </div>
     <div class="modal" v-if="showModal" @click="closeModal">
       <div class="modal-body" @click.stop :class="{'modal-body-wrong': wrongAnswer}">

@@ -27,8 +27,9 @@ const app = new Vue({
       const vm = this;
       vm.showChat = true;
       const typed = new Typed(".chat-text", {
-        strings: ["", text],
+        strings: [text],
         typeSpeed: 40,
+        startDelay: 200,
         backDelay: 500,
         fadeOut: true,
         onComplete: self => {
@@ -80,8 +81,9 @@ const app = new Vue({
       const vm = this;
       vm.showChat = true;
       const typed = new Typed(".chat-text", {
-        strings: ["", text],
+        strings: [text],
         typeSpeed: 40,
+        startDelay: 200,
         backDelay: 500,
         fadeOut: true,
         onComplete: self => {
