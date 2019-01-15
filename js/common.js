@@ -16,10 +16,7 @@ const spinner = document.querySelector('.spinner')
 const container = document.querySelector('.container')
 container.classList.add('display');
 
-let fontLoadChecker = setInterval(() => {
-  if(document.fonts.status === 'loaded') {
-    clearInterval(fontLoadChecker);
-    spinner.classList.add('display');
-    container.classList.remove('display');
-  }
-},100)
+document.fonts.ready.then(() => {
+  spinner.classList.add('display');
+  container.classList.remove('display');
+})
