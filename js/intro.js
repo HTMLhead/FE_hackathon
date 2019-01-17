@@ -69,6 +69,5 @@ const app = new Vue({
     }
   },
   mounted() {
-    this.activeChat();
   }
 })
