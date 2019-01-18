@@ -41,10 +41,31 @@ marquee {
   height: 100%;
 }
 
+.ending-credit-container {
+  width: 100vw;
+  overflow: hidden;
+  height: 300vh;
+  position: relative;
+  bottom: 100vh;
+}
+
 .ending-credit {
   width: 70%;
-  margin: 0 auto;
+  height: 100vh;
+  margin: 0 15%;
   text-align: center;
+  position: absolute;
+  bottom:0;
+  animation: curtainCall 30s linear infinite;
+}
+
+@keyframes curtainCall{
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 250vh;
+  }
 }
 
 @media screen and (min-width: 800px) {
