@@ -20,7 +20,9 @@ const app = new Vue({
         answer: "최저임금"
       }
     ],
-    wrongAnswer: false
+    wrongAnswer: false,
+    lockOpen: new Audio("./sound/lockOpen.mp3"),
+    lock: new Audio("./sound/lock.mp3")
   },
   methods: {
     activeChat(text) {
@@ -61,16 +63,14 @@ const app = new Vue({
         return item.input === item.answer;
       });
       if (correctAnswers.length === this.questions.length) {
-        const LockOpen = new Audio("./sound/lockOpen.mp3");
-        LockOpen.play();
+        this.lockOpen.play();
         setTimeout(() => {
           this.closeModal();
           this.successChat('자물쇠가 열렸다. 안에는 시험지가 놓여있었다.')
         }, 500);
       } else {
         this.wrongAnswer = true;
-        const Lock = new Audio("./sound/lock.mp3");
-        Lock.play();
+        this.lock.play();
         this.resetAnswer();
         setTimeout(() => {
           this.wrongAnswer = false;
