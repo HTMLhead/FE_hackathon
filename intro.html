@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>시험지를 훔쳤다 - 인트로</title>
+    <link rel="stylesheet" href="./css/intro.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>시험지를 훔쳤다 - 인트로</title>
-  <link rel="stylesheet" href="./css/intro.css">
-</head>
-
-<body>
-  <div class="container" id="app" @click="addIndex">
-    <div class="scroll-guide">
-      <img src="./photo/icons/bidi-arrow.svg" alt="bidirection arrow icon"> 화면을 좌우로 움직여보세요
-    </div>
-    <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
-      <div class="main">
-        <img v-bind:src="'./photo/' + story.imageUrl + '.jpeg'" class="main-image" @load="loadFunc">
-        <div class="main-icon"></div>
+  <body>
+    <div class="container" id="app" @click="addIndex">
+      <div class="scroll-guide">
+        <img src="./photo/icons/bidi-arrow.svg" alt="bidirection arrow icon" />
+        화면을 좌우로 움직여보세요
       </div>
-      <div class="chat">
-        <span class="chat-text"></span>
+      <div
+        class="intro"
+        v-for="(story, index) in stories"
+        v-if="index === activeIndex"
+      >
+        <div class="main">
+          <img
+            v-bind:src="'./photo/' + story.imageUrl + '.jpeg'"
+            class="main-image"
+            @load="loadFunc"
+          />
+          <div class="main-icon"></div>
+        </div>
+        <div class="chat"><span class="chat-text"></span></div>
       </div>
     </div>
-  </div>
-  <!-- <div class="skip-button" @click.stop="skipIntro()">Skip</div> -->
-  <script>
-    const Background = new Audio('./sound/background.mp3')
-    setTimeout(() => { Background.play(); }, 0);
-    Background.loop = true;
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script src="./js/intro.js"></script>
-</body>
+    <!-- <div class="skip-button" @click.stop="skipIntro()">Skip</div> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const background = new Audio("./sound/background.mp3");
+        backgroundMusicPlay(background);
+      });
 
+      function backgroundMusicPlay(background) {
+        background.play();
+        background.loop = true;
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="./js/intro.js"></script>
+  </body>
 </html>
