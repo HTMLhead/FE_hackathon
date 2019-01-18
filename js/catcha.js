@@ -32,13 +32,13 @@ var app = new Vue({
       }
     ],
     activeIndex: 0,
-    isLoaded: false
+    isLoaded: false,
+    catchedSound: new Audio('./sound/catcha.wav')
   },
   methods: {
     addIndex() {
       if (this.isLoaded && this.activeIndex === 1) {
-        const catcha = new Audio("./sound/catcha.wav");
-        catcha.play();
+        this.catchedSound.play();
       }
       if (this.isLoaded && this.activeIndex < 6) {
         this.activeIndex++;
