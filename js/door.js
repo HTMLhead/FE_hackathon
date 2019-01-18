@@ -3,7 +3,9 @@ const app = new Vue({
   el: '#app',
   data: {
     showChat: false,
-    hasKey: false
+    hasKey: false,
+    itemGetSound: new Audio('./sound/clickSound.mp3'),
+    doorOpenSound: new Audio('./sound/beepOpen.mp3'),
   },
   methods: {
     activeChat(text) {
@@ -19,8 +21,7 @@ const app = new Vue({
       });
     },
     getKey() {
-      const ClickSound = new Audio('./sound/clickSound.mp3');
-      ClickSound.play();
+      this.itemGetSound.play();
       this.activeChat("밤코카드를 획득했다.");
       setTimeout(() => {
         this.hasKey = true;
@@ -28,8 +29,7 @@ const app = new Vue({
     },
     openDoor() {
       if (this.hasKey) {
-        const Beep = new Audio('./sound/beepOpen.mp3');
-        Beep.play();
+        this.doorOpenSound.play();
         this.activeChat("삑. 문이 열렸다.");
         setTimeout(() => {
           window.location.href = "./front.html";
