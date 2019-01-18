@@ -28,7 +28,9 @@ var app = new Vue({
       }
     ],
     activeIndex: 0,
-    isLoaded: false
+    isLoaded: false,
+    alarmSound: new Audio('./sound/alarm.mp3'),
+    soundPlayData: true,
   },
   methods: {
     addIndex() {
@@ -38,9 +40,9 @@ var app = new Vue({
       } else if (this.isLoaded && this.activeIndex === 5) {
         window.location.href = "./end.html";
       }
-      if (this.activeIndex === 3) {
-        const Alarm = new Audio('./sound/alarm.mp3')
-        Alarm.play();
+      if (this.activeIndex === 3 && this.soundPlayData) {
+        this.soundPlayData = false;
+        this.alarmSound.play();
       }
     },
     activeChat() {
