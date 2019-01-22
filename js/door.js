@@ -1,4 +1,4 @@
-let count = 0;
+let catchaCount = 0;
 const app = new Vue({
   el: '#app',
   data: {
@@ -20,6 +20,9 @@ const app = new Vue({
         onComplete: (self) => { vm.closeChat(self) },
       });
     },
+    lockDoor() {
+      this.activeChat("문이 잠겨있다.");
+    },
     getKey() {
       this.itemGetSound.play();
       this.activeChat("밤코카드를 획득했다.");
@@ -39,11 +42,11 @@ const app = new Vue({
       }
     },
     catcha() {
-      count++;
-      if (count !== 2) {
+      catchaCount++;
+      if (catchaCount !== 2) {
         this.activeChat("열어. 라고 슬랙에 입력했지만 아무런 반응이 없다.");
       } else {
-        this.activeChat('열어. 라고 슬랙에 입력하자 사이렌이 울렸다.')
+        this.activeChat('열어. 라고 슬랙에 다시 한번 입력하자 사이렌이 울렸다!')
         setTimeout(() => {
           window.location.href = "./catcha.html";
         }, 3000)

@@ -14,10 +14,10 @@
     <div class="card" v-if="hasKey">밤코카드</div>
     <div class="main">
       <img src="./photo/door.jpeg" class="main-image">
-      <div @click="activeChat('문이 잠겨있다.')" class='door info'></div>
+      <div @click="lockDoor" class='door info'></div>
       <div @click="getKey" class='signBoard info'></div>
       <div @click="openDoor" class='security info'></div>
-      <div @click="catcha()" class='floor info'></div>
+      <div @click="catcha" class='floor info'></div>
     </div>
     <div class="chat" v-show="showChat">
       <span class="chat-text"></span>
