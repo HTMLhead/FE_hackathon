@@ -14,11 +14,7 @@
         <img src="./photo/icons/bidi-arrow.svg" alt="bidirection arrow icon" />
         화면을 좌우로 움직여보세요
       </div>
-      <div
-        class="intro"
-        v-for="(story, index) in stories"
-        v-if="index === activeIndex"
-      >
+      <div class="intro" v-for="(story, index) in stories" v-if="index === activeIndex">
         <div class="main">
           <img
             v-bind:src="'./photo/' + story.imageUrl + '.jpeg'"
@@ -42,7 +38,7 @@
         background.loop = true;
       }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="./js/intro.js"></script>
   </body>

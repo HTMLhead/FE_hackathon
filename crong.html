@@ -14,62 +14,39 @@
         <div class="crong inner" onclick="window.location.href='./crong.html';">
           <span class="inner-text">마스터<br />책상</span>
         </div>
-        <div
-          class="front-end inner"
-          onclick="window.location.href='./front.html';"
-        >
+        <div class="front-end inner" onclick="window.location.href='./front.html';">
           <span class="inner-text">프론트<br />자리</span>
         </div>
-        <div
-          class="class-room inner"
-          onclick="window.location.href='./room.html';"
-        >
+        <div class="class-room inner" onclick="window.location.href='./room.html';">
           <span class="inner-text">강의실<br />자리</span>
         </div>
       </div>
 
       <div class="main">
         <img src="./photo/crong.jpeg" class="main-image" />
-        <div
-          @click="activeChat('\'최저임금\'에 대한 책을 읽고 계시는군.')"
-          class="desk info"
-        ></div>
-        <div
-          @click="activeChat('가방 안에는 아무것도 없다.')"
-          class="bag info"
-        ></div>
+        <div @click="activeChat('\'최저임금\'에 대한 책을 읽고 계시는군.')" class="desk info"></div>
+        <div @click="activeChat('가방 안에는 아무것도 없다.')" class="bag info"></div>
         <div
           @click="activeChat('서랍이 잠겨있다. 자물쇠를 풀려면 문제를 맞혀야 할 것 같다.')"
           class="cabinet info"
         ></div>
-        <div
-          @click="activeChat('...윽. 저건 만지고 싶지 않다.')"
-          class="under info"
-        ></div>
+        <div @click="activeChat('...윽. 저건 만지고 싶지 않다.')" class="under info"></div>
         <div @click="openModal" class="lock"></div>
       </div>
       <div class="chat" v-show="showChat"><span class="chat-text"></span></div>
       <div class="modal" v-if="showModal" @click="closeModal">
-        <div
-          class="modal-body"
-          @click.stop
-          :class="{'modal-body-wrong': wrongAnswer}"
-        >
+        <div class="modal-body" @click.stop :class="{'modal-body-wrong': wrongAnswer}">
           <button class="modal-btn-close" @click="closeModal">x</button>
           <div class="modal-question" v-for="question in questions">
             <label class="modal-question-label">{{ question.question }}</label>
-            <input
-              type="text"
-              class="modal-question-input"
-              v-model="question.input"
-            />
+            <input type="text" class="modal-question-input" v-model="question.input" />
           </div>
           <button class="modal-btn-submit" @click="submitAnswer">열기</button>
         </div>
       </div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", _ => {
+      document.addEventListener("DOMContentLoaded", (_) => {
         const footStepSound = new Audio("./sound/footStep.mp3");
         footStepSoundPlay(footStepSound);
       });
@@ -78,7 +55,7 @@
         footStepSound.play();
       }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="./js/rooms.js"></script>
   </body>

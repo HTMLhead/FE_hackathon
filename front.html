@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>시험지를 훔쳤다 - 프론트 자리</title>
+    <link rel="stylesheet" href="./css/front.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>시험지를 훔쳤다 - 프론트 자리</title>
-  <link rel="stylesheet" href="./css/front.css" />
-</head>
+  <body>
+    <div class="container" id="app">
+      <div class="mini-map">
+        <div class="crong inner" onclick="window.location.href='./crong.html';">
+          <span class="inner-text">마스터<br />책상</span>
+        </div>
+        <div class="front-end inner" onclick="window.location.href='./front.html';">
+          <span class="inner-text">프론트<br />자리</span>
+        </div>
+        <div class="class-room inner" onclick="window.location.href='./room.html';">
+          <span class="inner-text">강의실<br />자리</span>
+        </div>
+      </div>
 
-<body>
-  <div class="container" id="app">
-    <div class="mini-map">
-      <div class="crong inner" onclick="window.location.href='./crong.html';">
-        <span class="inner-text">마스터<br />책상</span>
+      <div class="main">
+        <img src="./photo/front.jpeg" class="main-image" />
+        <div
+          @click="activeChat('\'윈도우xp\'에 대한 책이 눈에 띈다.')"
+          class="bookshelf info"
+        ></div>
+        <div @click="activeChat('아...해커톤 한다던데...하기 싫다.')" class="blackboard info"></div>
+        <div
+          @click="activeChat('남의 것은 건드리면 안 된다. 손대지 말자.')"
+          class="notebook info"
+        ></div>
       </div>
-      <div class="front-end inner" onclick="window.location.href='./front.html';">
-        <span class="inner-text">프론트<br />자리</span>
-      </div>
-      <div class="class-room inner" onclick="window.location.href='./room.html';">
-        <span class="inner-text">강의실<br />자리</span>
-      </div>
+      <div class="chat" v-show="showChat"><span class="chat-text"></span></div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (_) => {
+        const footStepSound = new Audio("./sound/footStep.mp3");
+        footStepSoundPlay(footStepSound);
+      });
 
-    <div class="main">
-      <img src="./photo/front.jpeg" class="main-image" />
-      <div @click="activeChat('\'윈도우xp\'에 대한 책이 눈에 띈다.')" class="bookshelf info"></div>
-      <div @click="activeChat('아...해커톤 한다던데...하기 싫다.')" class="blackboard info"></div>
-      <div @click="activeChat('남의 것은 건드리면 안 된다. 손대지 말자.')" class="notebook info"></div>
-    </div>
-    <div class="chat" v-show="showChat"><span class="chat-text"></span></div>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", _ => {
-      const footStepSound = new Audio("./sound/footStep.mp3");
-      footStepSoundPlay(footStepSound);
-    });
-
-    function footStepSoundPlay(footStepSound) {
-      footStepSound.play();
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script src="./js/rooms.js"></script>
-</body>
-
+      function footStepSoundPlay(footStepSound) {
+        footStepSound.play();
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="./js/rooms.js"></script>
+  </body>
 </html>

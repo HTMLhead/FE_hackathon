@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>시험지를 훔쳤다</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>시험지를 훔쳤다</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="shortcut icon" href="./favicon.ico">
-</head>
-
-<body>
-  <div class='spinner'>
-    <div class='spinner-animation'> 
-      <div class='spinner-inner-circle-container'>
-        <div class='spinner-inner-circle'></div>
-        <div class="soom-ment">재밌닭</div>
-      </div>
-    </div>
-    <div class='loading-sentence'>로딩중...</div>
-  </div>
-  <div class='container' id="app">
-    <div class="sound-guide">
-      <img src="./photo/icons/musical-note.svg" alt="musical-note-icon"> 스피커를 ON 해보세요
-    </div>
-    <header>
-      <div class='game-title'>시험지를 훔쳤다</div>
-    </header>
-
-    <div class='wholeBody'>
-      <div class='game-start btn' onclick="window.location.href='./intro.html';">
-        <div class='btn-sentence'>
-          게임 시작
+  <body>
+    <div class="spinner">
+      <div class="spinner-animation">
+        <div class="spinner-inner-circle-container">
+          <div class="spinner-inner-circle"></div>
+          <div class="soom-ment">재밌닭</div>
         </div>
       </div>
-      <div class='game-rule-container btn' @click="showGameRule">
-        <div class='btn-sentence'>
-          게임 방법
+      <div class="loading-sentence">로딩중...</div>
+    </div>
+    <div class="container" id="app">
+      <div class="sound-guide">
+        <img src="./photo/icons/musical-note.svg" alt="musical-note-icon" /> 스피커를 ON 해보세요
+      </div>
+      <header>
+        <div class="game-title">시험지를 훔쳤다</div>
+      </header>
+
+      <div class="wholeBody">
+        <div class="game-start btn" onclick="window.location.href='./intro.html';">
+          <div class="btn-sentence">게임 시작</div>
+        </div>
+        <div class="game-rule-container btn" @click="showGameRule">
+          <div class="btn-sentence">게임 방법</div>
+        </div>
+        <div v-bind:class="'game-rule' + show">
+          <span>딱 보면 척 알 걸요? 엌ㅋㅋㅋㅋㅋ</span>
         </div>
       </div>
-      <div v-bind:class="'game-rule' + show">
-        <span>딱 보면 척 알 걸요? 엌ㅋㅋㅋㅋㅋ</span>
-      </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="./js/common.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="./js/common.js"></script>
+  </body>
 </html>
